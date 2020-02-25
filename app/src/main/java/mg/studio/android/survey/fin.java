@@ -17,5 +17,6 @@ public class fin extends AppCompatActivity {
         moveTaskToBack(true);
         android.os.Process.killProcess(android.os.Process.myPid());
         System.exit(1);
+
     }
 }
