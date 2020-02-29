@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
-
+import android.content.Intent;
 public class fin extends AppCompatActivity {
 
     @Override
@@ -14,8 +14,14 @@ public class fin extends AppCompatActivity {
 
     }
     public  void endsur(View view){
-        moveTaskToBack(true);
-        android.os.Process.killProcess(android.os.Process.myPid());
+        finish();
+        int pid = android.os.Process.myPid();
+        android.os.Process.killProcess(pid);
+        Intent intent = new Intent(Intent.ACTION_MAIN);
+        intent.addCategory(Intent.CATEGORY_HOME);
+        startActivity(intent);
+        //moveTaskToBack(true);
+
         System.exit(1);
 
     }
