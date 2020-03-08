@@ -8,11 +8,10 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
-import android.widget.RadioGroup;
 import android.widget.Toast;
 import java.lang.StringBuilder;
 
-public class q_four extends AppCompatActivity {
+public class Q_four extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,10 +49,10 @@ public class q_four extends AppCompatActivity {
 
 
 
-            startActivity(new Intent(q_four.this, q_five.class));
+            startActivity(new Intent(Q_four.this, Q_five.class));
         }
         else{
-            Toast.makeText(q_four.this, "Need to select item!", Toast.LENGTH_LONG).show();
+            Toast.makeText(Q_four.this, "Need to select item!", Toast.LENGTH_LONG).show();
         }
 
     }

@@ -1,16 +1,10 @@
 package mg.studio.android.survey;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 
 import android.Manifest;
-import android.content.pm.PackageManager;
-import android.os.Build;
 import android.os.Bundle;
 import android.content.Intent;
-import android.os.Environment;
-import android.util.Log;
 import android.widget.TextView;
 import android.view.View;
 import android.widget.Toast;
@@ -21,13 +15,10 @@ import com.gun0912.tedpermission.PermissionListener;
 import com.gun0912.tedpermission.TedPermission;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.util.List;
 
-public class survey_report extends AppCompatActivity {
+public class Survey_report extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -119,13 +110,13 @@ public class survey_report extends AppCompatActivity {
         savedresult.append(f10);
         savedresult.append(f11);
         savedresult.append(f12);
-        final String path = survey_report.this.getExternalFilesDir(null).getAbsolutePath();
+        final String path = Survey_report.this.getExternalFilesDir(null).getAbsolutePath();
 
 
         PermissionListener pm =new PermissionListener() {
             @Override
             public void onPermissionGranted() {
-                Toast.makeText(survey_report.this, "Permission granted!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Survey_report.this, "Permission granted!", Toast.LENGTH_SHORT).show();
 
 
                 String fileLoc ="survey";
@@ -145,7 +136,7 @@ public class survey_report extends AppCompatActivity {
                         fout.write(savedresult.toString().getBytes());
                         fout.flush();
                         fout.close();
-                        Toast.makeText(survey_report.this, "JSON file saved!", Toast.LENGTH_LONG).show();
+                        Toast.makeText(Survey_report.this, "JSON file saved!", Toast.LENGTH_LONG).show();
 
                     } catch (Exception e) {
                         e.printStackTrace();
@@ -156,11 +147,11 @@ public class survey_report extends AppCompatActivity {
 
             @Override
             public void onPermissionDenied(List<String> deniedPermissions) {
-                Toast.makeText(survey_report.this, "Permission not given!", Toast.LENGTH_LONG).show();
+                Toast.makeText(Survey_report.this, "Permission not given!", Toast.LENGTH_LONG).show();
 
             }
         };
-        TedPermission.with(survey_report.this)
+        TedPermission.with(Survey_report.this)
                 .setPermissionListener(pm)
                 .setPermissions(Manifest.permission.READ_EXTERNAL_STORAGE,Manifest.permission.WRITE_EXTERNAL_STORAGE)
                 .check();
@@ -171,7 +162,7 @@ public class survey_report extends AppCompatActivity {
     }
 
     public void to_fin(View view) {
-       startActivity(new Intent(survey_report.this, fin.class));
+       startActivity(new Intent(Survey_report.this, Fin.class));
     }
 
 

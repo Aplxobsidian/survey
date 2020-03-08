@@ -11,7 +11,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-public class q_three extends AppCompatActivity {
+public class Q_three extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,9 +33,9 @@ public class q_three extends AppCompatActivity {
 
 
 
-            startActivity(new Intent(q_three.this, q_four.class));
+            startActivity(new Intent(Q_three.this, Q_four.class));
         } else {
-            Toast.makeText(q_three.this, "Need to select item!", Toast.LENGTH_LONG).show();
+            Toast.makeText(Q_three.this, "Need to select item!", Toast.LENGTH_LONG).show();
 
         }
     }

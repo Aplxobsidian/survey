@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.Toast;
 
-public class q_five extends AppCompatActivity {
+public class Q_five extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,10 +50,10 @@ public class q_five extends AppCompatActivity {
 
 
 
-            startActivity(new Intent(q_five.this, q_six.class));
+            startActivity(new Intent(Q_five.this, Q_six.class));
         }
         else{
-            Toast.makeText(q_five.this, "Need to select item!", Toast.LENGTH_LONG).show();
+            Toast.makeText(Q_five.this, "Need to select item!", Toast.LENGTH_LONG).show();
         }
 
     }

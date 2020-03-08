@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.content.Intent;
-public class fin extends AppCompatActivity {
+public class Fin extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

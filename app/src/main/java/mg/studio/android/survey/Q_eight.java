@@ -11,30 +11,35 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-public class q_ten extends AppCompatActivity {
+public class Q_eight extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.question_ten);
+        setContentView(R.layout.question_eight);
 
     }
 
-    public  void to_q_eleven(View view){
-        RadioGroup r10= findViewById(R.id.r10);
-        if (r10.getCheckedRadioButtonId()!=-1){
-            RadioButton sel_ten= findViewById(r10.getCheckedRadioButtonId());
-            String msgten = sel_ten.getText().toString();
+    public  void to_q_nine(View view){
+        RadioGroup r8= findViewById(R.id.r8);
+        if (r8.getCheckedRadioButtonId()!=-1){
+
+            RadioButton sel_eight= findViewById(r8.getCheckedRadioButtonId());
+            String msgeight = sel_eight.getText().toString();
 
             SharedPreferences mySharedPreferences = this.getSharedPreferences("MYPREFERENCENAME", Context.MODE_PRIVATE);
             SharedPreferences.Editor editor = mySharedPreferences.edit();
-            editor.putString("q_ten",msgten);
+            editor.putString("q_eight",msgeight);
             editor.apply();
-            startActivity(new Intent(q_ten.this,q_eleven.class));}
+
+
+            startActivity(new Intent(Q_eight.this, Q_nine.class));}
         else{
-            Toast.makeText(q_ten.this,"Need to select item!",Toast.LENGTH_LONG).show();
+            Toast.makeText(Q_eight.this,"Need to select item!",Toast.LENGTH_LONG).show();
+
         }
 
     }
+
 
 }

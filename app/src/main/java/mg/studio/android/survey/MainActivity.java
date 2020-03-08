@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     public void to_q_one(View view){
         CheckBox welbox = findViewById(R.id.acceptreq);
         if (welbox.isChecked()){
-        startActivity(new Intent(MainActivity.this,q_one.class));}
+        startActivity(new Intent(MainActivity.this, AutoGen.class));}
         else{
             Toast.makeText(MainActivity.this,"Need to agree terms first!",Toast.LENGTH_LONG).show();
 

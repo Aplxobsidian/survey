@@ -10,7 +10,7 @@ import android.widget.*;
 import java.lang.*;
 import android.content.SharedPreferences;
 
-public class q_one extends AppCompatActivity {
+public class Q_one extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,12 +29,12 @@ public class q_one extends AppCompatActivity {
             editor.putString("q_one",msgone);
             editor.apply();
 
-            startActivity(new Intent(q_one.this,q_two.class));
+            startActivity(new Intent(Q_one.this, Q_two.class));
 
 
         }
         else{
-            Toast.makeText(q_one.this,"Need to select item!",Toast.LENGTH_LONG).show();
+            Toast.makeText(Q_one.this,"Need to select item!",Toast.LENGTH_LONG).show();
 
         }
 
